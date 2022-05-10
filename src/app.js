@@ -3,7 +3,7 @@ import "express-async-errors";
 import express from "express";
 import logger from "./utils/logger.js";
 import ErrorHandler from "./middleware/error-handler.js";
-import v1Router from "./v1/index.js"
+import v1Router from "./v1/index.js";
 
 const app = express();
 
