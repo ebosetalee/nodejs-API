@@ -1,0 +1,59 @@
+{
+    "name": "nodejs-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node src/index.js",
+        "dev": "nodemon src/index.js",
+        "test": "jest",
+        "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+        "prettier": "npx prettier --write .",
+        "lint": "eslint",
+        "lint:fix": "eslint . --ext .js --fix",
+        "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+    },
+    "pre-commit": [
+        "precommit-msg",
+        "prettier",
+        "lint:fix"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ebosetalee/nodejs-API.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ebosetalee/nodejs-API/issues"
+    },
+    "homepage": "https://github.com/ebosetalee/nodejs-API#readme",
+    "dependencies": {
+        "bcrypt": "^5.0.1",
+        "dotenv": "^16.0.0",
+        "express": "^4.18.1",
+        "express-async-errors": "^3.1.1",
+        "http-status-codes": "^2.2.0",
+        "joi": "^17.6.0",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^6.3.3",
+        "winston": "^3.7.2"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.5.4",
+        "@babel/preset-env": "^7.17.10",
+        "eslint": "^8.15.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "jest": "^28.1.0",
+        "nodemon": "^2.0.16",
+        "pre-commit": "^1.2.2",
+        "prettier": "^2.6.2",
+        "prettier-eslint": "^14.0.2"
+    },
+    "eslintIgnore": [
+        "error-handler.js"
+    ]
+}

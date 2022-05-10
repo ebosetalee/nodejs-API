@@ -1,0 +1,6 @@
+{
+    "rootDir": "./src",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.js?$",
+    "moduleFileExtensions": ["js"],
+    "moduleDirectories": ["node_modules", "lib"]
+}
